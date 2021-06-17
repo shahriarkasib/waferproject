@@ -1,1 +1,0 @@
-web: python application.py   --main --processes 4 --threads 2
