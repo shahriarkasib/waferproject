@@ -114,8 +114,8 @@ def trainRouteClient():
 
 #--------Main------------------
 if __name__ == "__main__":
-    application.debug = False
-    application.run()
+    application.debug = True
+    application.run(port = 80)
    #application.run(host='127.0.0.1', port=8001, debug=True)
 #------------------------------
 
