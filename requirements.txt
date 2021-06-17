@@ -34,4 +34,3 @@ boto==2.49.0
 pymongo==3.11.4
 flake8==3.9.2
 tox==3.23.1
-xgboost==0.90
