@@ -33,3 +33,4 @@ flake8==3.9.2
 tox==3.23.1
 cmake==3.20.3
 xgboost==1.4.2
+gunicorn==20.1.0
