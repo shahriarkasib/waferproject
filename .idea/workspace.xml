@@ -15,27 +15,15 @@
       <change afterPath="$PROJECT_DIR$/LLD/~$fer_fault_detection.docx" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/LLD/~$oblem Statement.docx" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Prediction_Raw_Data_Validation/predictionDataValidation.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Procfile" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Training_Raw_data_validation/rawValidation.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WaferFaultDetection_new.rar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/application.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/best_model_finder/tuner.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/data_ingestion/data_loader.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/data_ingestion/data_loader_prediction.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/data_preprocessing/clustering.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/data_preprocessing/preprocessing.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/file_operations/file_methods.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flask_monitoringdashboard.db" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/logs_insertion_to_db/training_log_insertion_to_db.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manifest.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/predictFromModel.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/prediction_Validation_Insertion.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/preprocessing_data/K-Means_Elbow.PNG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/preprocessing_data/null_values.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/runtime.txt" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/trainingModel.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/training_Validation_Insertion.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/easy-install.pth" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pip-19.0.3-py3.7.egg/EGG-INFO/PKG-INFO" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pip-19.0.3-py3.7.egg/EGG-INFO/SOURCES.txt" afterDir="false" />
@@ -372,8 +360,9 @@
       <change afterPath="$PROJECT_DIR$/venv/pyvenv.cfg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.github/workflows/main.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/main.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application_logging/logger.py" beforeDir="false" afterPath="$PROJECT_DIR$/application_logging/logger.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/preprocessing_data/null_values.csv" beforeDir="false" afterPath="$PROJECT_DIR$/preprocessing_data/null_values.csv" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -395,7 +384,7 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RunManager">
-    <configuration name="application" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="waferproject2" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -407,7 +396,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/application.py" />
+      <option name="SCRIPT_NAME" value="C:\Users\User\PycharmProjects\waferproject2\main.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -418,7 +407,7 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.application" />
+        <item itemvalue="Python.main" />
       </list>
     </recent_temporary>
   </component>
