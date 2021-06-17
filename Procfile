@@ -1,1 +1,1 @@
-web: python application.py   --master --processes 4 --threads 2
+web: python application.py   --main --processes 4 --threads 2
