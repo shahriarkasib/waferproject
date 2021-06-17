@@ -13,7 +13,7 @@ application = Flask(__name__)
 @application.route("/", methods=['GET'])
 def home():
     return render_template('index.html')
-
+#
 @application.route("/predict", methods=['POST'])
 def predictRouteClient():
     aws_obj = aws()
