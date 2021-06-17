@@ -8,7 +8,7 @@
 #---------------------------------------------------------------------
 name: CI-CD-Pipeline-to-AWS-ElasticBeanstalk
 env:
-    EB_PACKAGE_S3_BUCKET_NAME: "waferfaultdetectionapp"
+    EB_PACKAGE_S3_BUCKET_NAME: "waferproject2"
     EB_APPLICATION_NAME: "Practiceappwafer"
     EB_ENVIRONMENT_NAME: "Practiceappwafer-env"
     DEPLOY_PACKAGE_NAME: "flask-app-${{ github.sha }}.zip"

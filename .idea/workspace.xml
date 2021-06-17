@@ -21,7 +21,6 @@
       <change afterPath="$PROJECT_DIR$/Training_Raw_data_validation/rawValidation.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/WaferFaultDetection_new.rar" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/application.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/application_logging/logger.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/best_model_finder/tuner.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/data_ingestion/data_loader.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/data_ingestion/data_loader_prediction.py" afterDir="false" />
@@ -374,6 +373,7 @@
       <change afterPath="$PROJECT_DIR$/venv/Scripts/python.exe" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/venv/Scripts/pythonw.exe" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/venv/pyvenv.cfg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application_logging/logger.py" beforeDir="false" afterPath="$PROJECT_DIR$/application_logging/logger.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
