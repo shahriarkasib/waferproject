@@ -3,9 +3,7 @@ certifi==2019.11.28
 Click==7.0
 cycler==0.10.0
 Flask==1.1.1
-Flask-Cors==3.0.8
 importlib-metadata==1.4.0
-Flask-MonitoringDashboard==3.0.6
 itsdangerous==1.1.0
 Jinja2==2.11.0
 joblib==0.14.1
@@ -30,7 +28,6 @@ Werkzeug==0.16.1
 wincertstore==0.2
 zipp==2.0.1
 boto3==1.17.69
-boto==2.49.0
 pymongo==3.11.4
 flake8==3.9.2
 tox==3.23.1
