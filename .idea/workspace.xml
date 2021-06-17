@@ -15,7 +15,6 @@
       <change afterPath="$PROJECT_DIR$/LLD/~$oblem Statement.docx" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Prediction_Raw_Data_Validation/predictionDataValidation.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Training_Raw_data_validation/rawValidation.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/application.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/best_model_finder/tuner.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/data_ingestion/data_loader.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/data_ingestion/data_loader_prediction.py" afterDir="false" />
@@ -361,6 +360,7 @@
       <change beforePath="$PROJECT_DIR$/.ebextensions/python.config" beforeDir="false" afterPath="$PROJECT_DIR$/.ebextensions/python.config" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.github/workflows/main.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/main.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application.py" beforeDir="false" afterPath="$PROJECT_DIR$/application.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application_logging/logger.py" beforeDir="false" afterPath="$PROJECT_DIR$/application_logging/logger.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/preprocessing_data/null_values.csv" beforeDir="false" afterPath="$PROJECT_DIR$/preprocessing_data/null_values.csv" afterDir="false" />
