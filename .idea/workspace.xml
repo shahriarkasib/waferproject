@@ -3,10 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="3d2b94a9-e2c9-4877-ad29-b82ee5eb77fe" name="Default Changelist" comment="">
       <change afterPath="$PROJECT_DIR$/.ebextensions/python.config" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.github/workflows/main.yaml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/csv-plugin.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Connect_with_awsS3/connect_aws.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/DataTransform_Training/DataTransformation.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/DataTransformation_Prediction/DataTransformationPrediction.py" afterDir="false" />
@@ -373,6 +371,8 @@
       <change afterPath="$PROJECT_DIR$/venv/Scripts/python.exe" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/venv/Scripts/pythonw.exe" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/venv/pyvenv.cfg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/workflows/main.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/main.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application_logging/logger.py" beforeDir="false" afterPath="$PROJECT_DIR$/application_logging/logger.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

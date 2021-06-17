@@ -3,14 +3,14 @@
 #
 # Version      Date        Info
 # 1.0          2019        Initial Version
-##
+###
 # Made by Denis Astahov ADV-IT Copyleft (c) 2019
 #---------------------------------------------------------------------
 name: CI-CD-Pipeline-to-AWS-ElasticBeanstalk
 env:
-    EB_PACKAGE_S3_BUCKET_NAME: "waferproject2"
-    EB_APPLICATION_NAME: "Practiceappwafer"
-    EB_ENVIRONMENT_NAME: "Practiceappwafer-env"
+    EB_PACKAGE_S3_BUCKET_NAME: "waferproject3.7"
+    EB_APPLICATION_NAME: "Waferproject3.7"
+    EB_ENVIRONMENT_NAME: "Waferproject37-env-env"
     DEPLOY_PACKAGE_NAME: "flask-app-${{ github.sha }}.zip"
     AWS_REGION_NAME: "us-east-1"
 
