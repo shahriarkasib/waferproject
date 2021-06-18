@@ -107,9 +107,10 @@ class Model_Finder:
                        'message': 'fitting the xgboost moedl',
                        'time': dt.now().strftime("%d/%m/%Y %H:%M:%S")}
             self.db_obj.insert_data(data_db)
-            self.grid.fit(train_x, train_y)
+
             self.grid = GridSearchCV(XGBClassifier(objective='binary:logistic'), self.param_grid_xgboost, verbose=3,
                                      cv=5)
+            self.grid.fit(train_x, train_y)
             # finding the best parameters
             data_db = {'objective': 'XGBoostbestparams', 'status': 'ok', 'error': '',
                        'message': 'fitted the xgboost moedl',
