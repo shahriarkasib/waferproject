@@ -45,13 +45,13 @@ class KMeansClustering:
                 kmeans=KMeans(n_clusters=i,init='k-means++',random_state=42) # initializing the KMeans object
                 kmeans.fit(data) # fitting the data to the KMeans Algorithm
                 wcss.append(kmeans.inertia_)
-            plt.plot(range(1,11),wcss) # creating the graph between WCSS and the number of clusters
-            plt.title('The Elbow Method')
-            plt.xlabel('Number of clusters')
-            plt.ylabel('WCSS')
-            #plt.show()
-            plt.savefig('preprocessing_data/K-Means_Elbow.PNG') # saving the elbow plot locally
-            # finding the value of the optimum cluster programmatically
+            # plt.plot(range(1,11),wcss) # creating the graph between WCSS and the number of clusters
+            # plt.title('The Elbow Method')
+            # plt.xlabel('Number of clusters')
+            # plt.ylabel('WCSS')
+            # #plt.show()
+            # plt.savefig('preprocessing_data/K-Means_Elbow.PNG') # saving the elbow plot locally
+            # # finding the value of the optimum cluster programmatically
             self.kn = KneeLocator(range(1, 11), wcss, curve='convex', direction='decreasing')
 
             data_db = {'objective': 'ElbowPlot', 'status': 'ok', 'error': '',
@@ -95,7 +95,7 @@ class KMeansClustering:
 
             data_db = {'objective': 'CreateCluster', 'status': 'ok', 'error': '',
                     'message': 'succesfully created '+str(self.kn.knee)+ 'clusters. Exited the create_clusters method of the KMeansClustering class',
-                    'time': dt.now().strftime("%d/%m/%Y %H:%M:%S")}
+                    'time': 'very nice'}
             self.db_obj.insert_data(data_db)
 
 

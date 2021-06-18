@@ -44,7 +44,7 @@ class File_Operation:
                 )
             else:
                 pass
-            key = keyname+'.pkl'
+            key = keyname+'.pkl1'
 
             pickle_byte_obj = pickle.dumps(model)
             self.resource.Object(bucket, key).put(Body=pickle_byte_obj)
