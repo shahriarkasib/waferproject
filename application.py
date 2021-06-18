@@ -82,10 +82,10 @@ def trainRouteClient():
         #if request.json['folderPath'] is not None:
             #path = request.json['folderPath']
             #path = 'Training_Batch_Files'
-        db_obj = training_log_insertion_to_db('TrainingGeneralLog')
-        data_db = {'objective': 'TrainSystem', 'message': "Training Started",
-                   'time': dt.now().strftime("%d/%m/%Y %H:%M:%S")}
-        db_obj.insert_data(data_db)
+        #db_obj = training_log_insertion_to_db('TrainingGeneralLog')
+        #data_db = {'objective': 'TrainSystem', 'message': "Training Started",
+                   #'time': dt.now().strftime("%d/%m/%Y %H:%M:%S")}
+        #db_obj.insert_data(data_db)
         aws_obj.delete_modelfiles('modelfilesh')
 
         train_valObj = train_validation(aws_obj.client, aws_obj.resource)  # object initialization
