@@ -7,7 +7,7 @@ from Connect_with_awsS3.connect_aws import aws
 from logs_insertion_to_db.training_log_insertion_to_db import training_log_insertion_to_db
 import json
 from datetime import datetime as dt
-
+#
 application = Flask(__name__)
 
 @application.route("/", methods=['GET'])
