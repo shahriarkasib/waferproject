@@ -103,8 +103,17 @@ class Model_Finder:
             # Creating an object of the Grid Search class
             self.grid= GridSearchCV(XGBClassifier(objective='binary:logistic'),self.param_grid_xgboost, verbose=3,cv=5)
             # finding the best parameters
+            data_db = {'objective': 'XGBoostbestparams', 'status': 'ok', 'error': '',
+                       'message': 'fitting the xgboost moedl',
+                       'time': dt.now().strftime("%d/%m/%Y %H:%M:%S")}
+            self.db_obj.insert_data(data_db)
             self.grid.fit(train_x, train_y)
-
+            self.grid = GridSearchCV(XGBClassifier(objective='binary:logistic'), self.param_grid_xgboost, verbose=3,
+                                     cv=5)
+            # finding the best parameters
+            data_db = {'objective': 'XGBoostbestparams', 'status': 'ok', 'error': '',
+                       'message': 'fitted the xgboost moedl',
+                       'time': dt.now().strftime("%d/%m/%Y %H:%M:%S")}
             # extracting the best parameters
             self.learning_rate = self.grid.best_params_['learning_rate']
             self.max_depth = self.grid.best_params_['max_depth']
