@@ -81,8 +81,13 @@ class trainModel:
             self.db_obj.insert_data(data_db)
             kmeans=clustering.KMeansClustering(self.db_obj, self.client, self.resource) # object initialization.
             print("creating clustering")
+            data_db = {'objective': 'training', 'status': 'ok', 'error': '', 'message': "Cluster created For Training",
+                       'time': dt.now().strftime("%d/%m/%Y %H:%M:%S")}
+            self.db_obj.insert_data(data_db)
             number_of_clusters=kmeans.elbow_plot(X)  #  using the elbow plot to find the number of optimum clusters
-
+            data_db = {'objective': 'training', 'status': 'ok', 'error': '', 'message': "Elbow Plot Done",
+                       'time': dt.now().strftime("%d/%m/%Y %H:%M:%S")}
+            self.db_obj.insert_data(data_db)
             # Divide the data into clusters
             X=kmeans.create_clusters(X,number_of_clusters)
             data_db = {'objective': 'training', 'status':'ok','error':'', 'message': "Cluster Created",
