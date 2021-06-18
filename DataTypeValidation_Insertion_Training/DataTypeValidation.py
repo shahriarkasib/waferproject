@@ -120,6 +120,10 @@ class dBOperation:
             obj = self.client.get_object(
                 Bucket='goodrawdata',
                 Key=file)
+            message = 'value insertion started of one file'
+            data_db = {'objective': 'insertIntoTableGoodData', 'status': 'ok', 'error': '',
+                       'message': message, 'file': file, 'time': dt.now().strftime("%d/%m/%Y %H:%M:%S")}
+            self.db_obj.insert_data(data_db)
             data= pd.read_csv(obj['Body'])
             data.drop('Unnamed: 0',axis = 1, inplace = True)
             data.drop('Unnamed: 0.1', axis=1, inplace=True)
