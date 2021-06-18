@@ -82,12 +82,15 @@ def trainRouteClient():
         #if request.json['folderPath'] is not None:
             #path = request.json['folderPath']
             #path = 'Training_Batch_Files'
-        #db_obj = training_log_insertion_to_db('TrainingGeneralLog')
-        #data_db = {'objective': 'TrainSystem', 'message': "Training Started",
-                   #'time': dt.now().strftime("%d/%m/%Y %H:%M:%S")}
-        #db_obj.insert_data(data_db)
-        aws_obj.delete_modelfiles('modelfilesh')
         db_obj = training_log_insertion_to_db('TrainingGeneralLog')
+        print("obj created")
+        data_db = {'objective': 'TrainSystem', 'message': "Training Started",
+                   'time': dt.now().strftime("%d/%m/%Y %H:%M:%S")}
+        print("ok5")
+        db_obj.insert_data(data_db)
+        print("inserting data")
+        aws_obj.delete_modelfiles('modelfilesh')
+        #db_obj = training_log_insertion_to_db('TrainingGeneralLog')
         train_valObj = train_validation(aws_obj.client, aws_obj.resource)  # object initialization
         train_valObj.train_validation()  # calling the training_validation function
         trainModelObj = trainModel(aws_obj.client, aws_obj.resource)  # object initialization
@@ -114,8 +117,8 @@ def trainRouteClient():
 
 #--------Main------------------
 if __name__ == "__main__":
-    application.run()
-   #application.run(host='127.0.0.1', port=8001, debug=True)
+    #application.run()
+   application.run(host='127.0.0.1', port=8001, debug=True)
 #------------------------------
 
 ######
