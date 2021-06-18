@@ -87,7 +87,7 @@ def trainRouteClient():
                    #'time': dt.now().strftime("%d/%m/%Y %H:%M:%S")}
         #db_obj.insert_data(data_db)
         aws_obj.delete_modelfiles('modelfilesh')
-
+        db_obj = training_log_insertion_to_db('TrainingGeneralLog')
         train_valObj = train_validation(aws_obj.client, aws_obj.resource)  # object initialization
         train_valObj.train_validation()  # calling the training_validation function
         trainModelObj = trainModel(aws_obj.client, aws_obj.resource)  # object initialization
