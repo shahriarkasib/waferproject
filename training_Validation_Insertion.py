@@ -14,7 +14,7 @@ class train_validation:
 
     def train_validation(self):
         try:
-
+            print("start train validation")
             # extracting values from prediction schema
             data_db = {'objective': 'rawdata', 'message': "Start of Validation on files", 'time':dt.now().strftime("%d/%m/%Y %H:%M:%S")}
             self.db_obj.insert_data(data_db)
@@ -28,7 +28,7 @@ class train_validation:
             data_db = {'objective': 'rawdata', 'message': "Got values From Schema",
                     'time': dt.now().strftime("%d/%m/%Y %H:%M:%S")}
             self.db_obj.insert_data(data_db)
-
+            print("get values from schema")
             data_db = {'objective': 'rawdata', 'message': "Start of definining regex to validate filename",
                     'time': dt.now().strftime("%d/%m/%Y %H:%M:%S")}
             self.db_obj.insert_data(data_db)
@@ -38,21 +38,23 @@ class train_validation:
             data_db = {'objective': 'rawdata', 'message': "Regex Defined to validate filename",
                     'time': dt.now().strftime("%d/%m/%Y %H:%M:%S")}
             self.db_obj.insert_data(data_db)
-
+            print("create manual rehex")
             # validating filename of prediction files
             data_db = {'objective': 'rawdata', 'message': "Start of validating Raw Data",
                     'time': dt.now().strftime("%d/%m/%Y %H:%M:%S")}
             self.db_obj.insert_data(data_db)
+
 
             data_db = {'objective': 'rawdata', 'message': "Start of validating filename",
                     'time': dt.now().strftime("%d/%m/%Y %H:%M:%S")}
             self.db_obj.insert_data(data_db)
 
             self.raw_data.validationFileNameRaw(regex, LengthOfDateStampInFile, LengthOfTimeStampInFile)
-
+            print("print validation file name")
             data_db = {'objective': 'rawdata', 'message': "Filename Validated",
                     'time': dt.now().strftime("%d/%m/%Y %H:%M:%S")}
             self.db_obj.insert_data(data_db)
+
 
             # validating column length in the file
             data_db = {'objective': 'rawdata', 'message': "Start of validating ColumnLength",
@@ -64,7 +66,8 @@ class train_validation:
             data_db = {'objective': 'rawdata', 'message': "ColumnLength Validated",
                     'time': dt.now().strftime("%d/%m/%Y %H:%M:%S")}
             self.db_obj.insert_data(data_db)
-
+            print("validating column length ok")
+            print("ok")
             # validating if any column has all values missing
             data_db = {'objective': 'rawdata', 'message': "Validating Missing Values In whole Column",
                     'time': dt.now().strftime("%d/%m/%Y %H:%M:%S")}
@@ -74,6 +77,7 @@ class train_validation:
             data_db = {'objective': 'rawdata', 'message': "Missing Values Validated",
                     'time': dt.now().strftime("%d/%m/%Y %H:%M:%S")}
             self.db_obj.insert_data(data_db)
+            print("validating missing values in column")
 
             data_db = {'objective': 'rawdata', 'message': "Raw Data Validation Completed",
                     'time': dt.now().strftime("%d/%m/%Y %H:%M:%S")}
@@ -89,6 +93,7 @@ class train_validation:
             self.db_obj.insert_data(data_db)
 
             self.dataTransform.replaceMissingWithNull()
+            print("replacing missing values with null")
 
             data_db = {'objective': 'rawdata', 'message': "Missing values Replaced",
                     'time': dt.now().strftime("%d/%m/%Y %H:%M:%S")}
@@ -116,7 +121,7 @@ class train_validation:
             self.db_obj.insert_data(data_db)
 
             self.dBOperation.insertIntoTableGoodData(table)
-
+            print("data imserted")
             data_db = {'objective': 'rawdata', 'message': "Insertion of Training Data in Table completed",
                     'time': dt.now().strftime("%d/%m/%Y %H:%M:%S")}
             self.db_obj.insert_data(data_db)

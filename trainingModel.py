@@ -36,6 +36,7 @@ class trainModel:
         self.db_obj.insert_data(data_db)
 
         try:
+            print("start training model")
             # Getting the data from the source
             data_db = {'objective': 'training', 'status':'ok','error':'', 'message': "Getting Training Data from DataBase",
                     'time': dt.now().strftime("%d/%m/%Y %H:%M:%S")}
@@ -51,10 +52,12 @@ class trainModel:
                     'time': dt.now().strftime("%d/%m/%Y %H:%M:%S")}
             self.db_obj.insert_data(data_db)
             preprocessor=preprocessing.Preprocessor(self.db_obj)
+            print("preprocessing")
             data=preprocessor.remove_columns(data,['Wafer']) # remove the unnamed column as it doesn't contribute to prediction.
             # create separate features and labels
             X,Y=preprocessor.separate_label_feature(data,label_column_name='Good/Bad')
             print('x y seperated')
+            print("seperating label feature")
             # check if missing values are present in the dataset
             is_null_present=preprocessor.is_null_present(X)
             # if missing values are there, replace them appropriately.
@@ -67,7 +70,8 @@ class trainModel:
             cols_to_drop=preprocessor.get_columns_with_zero_std_deviation(X)
             # drop the columns obtained above
             X=preprocessor.remove_columns(X,cols_to_drop)
-            """ Applying the clustering approach"""
+            print("removing columns")
+            #""" Applying the clustering approach"""
             data_db = {'objective': 'training', 'status':'ok','error':'', 'message': "Data Prepeared For Training",
                     'time': dt.now().strftime("%d/%m/%Y %H:%M:%S")}
             self.db_obj.insert_data(data_db)
@@ -76,7 +80,7 @@ class trainModel:
                     'time': dt.now().strftime("%d/%m/%Y %H:%M:%S")}
             self.db_obj.insert_data(data_db)
             kmeans=clustering.KMeansClustering(self.db_obj, self.client, self.resource) # object initialization.
-
+            print("creating clustering")
             number_of_clusters=kmeans.elbow_plot(X)  #  using the elbow plot to find the number of optimum clusters
 
             # Divide the data into clusters

@@ -90,9 +90,12 @@ def trainRouteClient():
         db_obj.insert_data(data_db)
         print("inserting data")
         aws_obj.delete_modelfiles('modelfilesh')
+        print("deleted")
         #db_obj = training_log_insertion_to_db('TrainingGeneralLog')
         train_valObj = train_validation(aws_obj.client, aws_obj.resource)  # object initialization
         train_valObj.train_validation()  # calling the training_validation function
+        print("validation done")
+
         trainModelObj = trainModel(aws_obj.client, aws_obj.resource)  # object initialization
         trainModelObj.trainingModel()  # training the model for the files in the table
         data_db = {'objective': 'TrainSystem', 'message': "Training Done",
