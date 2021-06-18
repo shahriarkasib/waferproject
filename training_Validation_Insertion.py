@@ -120,6 +120,10 @@ class train_validation:
             data_db = {'objective': 'rawdata', 'message': "Insertion of Training Data in Table completed",
                     'time': dt.now().strftime("%d/%m/%Y %H:%M:%S")}
             self.db_obj.insert_data(data_db)
+
+            data_db = {'objective': 'rawdataokfine', 'message': "Insertion of Training Data in Table completedcvery nicely",
+                       'time': dt.now().strftime("%d/%m/%Y %H:%M:%S")}
+            self.db_obj.insert_data(data_db)
             # self.log_writer.log(self.file_object, "Deleting Good Data Folder!!!")
             # # Delete the good data folder after loading files in table
             # self.raw_data.deleteExistingGoodDataTrainingFolder()
