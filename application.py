@@ -98,7 +98,7 @@ def trainRouteClient():
 
         trainModelObj = trainModel(aws_obj.client, aws_obj.resource)  # object initialization
         trainModelObj.trainingModel()  # training the model for the files in the table
-        data_db = {'objective': 'TrainSystem', 'message': "Training Done",
+        data_db = {'objective': 'TrainSystem', 'message': "Training Done in AWS",
                    'time': dt.now().strftime("%d/%m/%Y %H:%M:%S")}
         db_obj.insert_data(data_db)
         aws_obj.send_mail('shahriarsourav@iut-dhaka.edu', 'shahriar@moonfroglabs.com', 'Bad Data',
