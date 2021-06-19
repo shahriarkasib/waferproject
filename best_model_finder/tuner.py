@@ -169,7 +169,7 @@ class Model_Finder:
         self.db_obj.insert_data(data_db)
         # create best model for XGBoost
         try:
-            self.xgboost= self.get_best_params_for_xgboost(train_x,train_y)
+            self.xgboost= self.get_best_params_for_random_forest(train_x,train_y)
             self.prediction_xgboost = self.xgboost.predict(test_x) # Predictions using the XGBoost Model
 
             if len(test_y.unique()) == 1: #if there is only one label in y, then roc_auc_score returns error. We will use accuracy in that case
