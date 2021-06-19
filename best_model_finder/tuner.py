@@ -104,13 +104,25 @@ class Model_Finder:
             self.grid= GridSearchCV(XGBClassifier(objective='binary:logistic'),self.param_grid_xgboost, verbose=3,cv=5)
             # finding the best parameters
             data_db = {'objective': 'XGBoostbestparams', 'status': 'ok', 'error': '',
-                       'message': 'fitting the xgboost moedl',
+                       'message': 'fitting the xgboost model',
                        'time': dt.now().strftime("%d/%m/%Y %H:%M:%S")}
             self.db_obj.insert_data(data_db)
-
+            data_db = {'objective': 'XGBoostbestparams', 'status': 'ok', 'error': '',
+                       'message': 'declaring gridsearchcv',
+                       'time': dt.now().strftime("%d/%m/%Y %H:%M:%S")}
+            self.db_obj.insert_data(data_db)
             self.grid = GridSearchCV(XGBClassifier(objective='binary:logistic'), self.param_grid_xgboost, verbose=3,
                                      cv=5)
+            data_db = {'objective': 'XGBoostbestparams', 'status': 'ok', 'error': '',
+                       'message': 'declared gridsearchcv',
+                       'time': dt.now().strftime("%d/%m/%Y %H:%M:%S")}
+            self.db_obj.insert_data(data_db)
             self.grid.fit(train_x, train_y)
+
+            data_db = {'objective': 'XGBoostbestparams', 'status': 'ok', 'error': '',
+                       'message': 'start training',
+                       'time': dt.now().strftime("%d/%m/%Y %H:%M:%S")}
+            self.db_obj.insert_data(data_db)
             # finding the best parameters
             data_db = {'objective': 'XGBoostbestparams', 'status': 'ok', 'error': '',
                        'message': 'fitted the xgboost moedl',
